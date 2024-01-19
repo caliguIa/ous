@@ -5,3 +5,5 @@ export const COMMISSION_RATES = [
   { min: 15000, max: 20000, rate: 0.2 },
   { min: 20000, max: Infinity, rate: 0.25 },
 ] as const;
+
+export const CUR_LANG = 'EN';

@@ -1,6 +1,5 @@
 import { useCallback, useMemo, useState, ChangeEventHandler } from 'react';
-import { getCommission } from '../../utils';
-import { COMMISSION_RATES } from '../../utils';
+import { LANG, getCommission, COMMISSION_RATES, CUR_LANG } from '../../utils';
 
 export const Widget = () => {
   const [revenueValue, setRevenueValue] = useState<number>(0);
@@ -21,12 +20,18 @@ export const Widget = () => {
             <div>
               £{bandMin} to £{bandMax}
             </div>
-            <div className="text-xl font-medium text-black">qualifying revenue: £{qualifyingRevenueAmount}</div>
-            <div>commission for this band: £{commission}</div>
+            <div className="text-xl font-medium text-black">
+              {LANG[CUR_LANG]['WIDGET.BAND.QUALIFYING_REVENUE']} £{qualifyingRevenueAmount}
+            </div>
+            <div>
+              {LANG[CUR_LANG]['WIDGET.BAND.COMMISSION']} £{commission}
+            </div>
           </div>
         );
       })}
-      <div>total commission: £{totalCommission}</div>
+      <div>
+        {LANG[CUR_LANG]['WIDGET.TOTAL_COMMISSION']} £{totalCommission}
+      </div>
     </div>
   );
 };
