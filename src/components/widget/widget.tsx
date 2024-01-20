@@ -1,19 +1,34 @@
 import { useCallback, useMemo, useState, ChangeEventHandler } from 'react';
-import { LANG, getCommission, COMMISSION_RATES, CUR_LANG } from '../../utils';
+import { LANG, CUR_LANG } from '../../utils';
+import { useCommission, useCommissionRates } from '../../hooks';
 
 export const Widget = () => {
   const [revenueValue, setRevenueValue] = useState<number>(0);
-  const { commissionPerBand, totalCommission } = useMemo(() => getCommission(revenueValue), [revenueValue]);
+  const { data: commissionRates, isLoading, isError } = useCommissionRates({ willError: false });
+
+  const { commissionPerBand, totalCommission } = useMemo(
+    () => useCommission(revenueValue, commissionRates),
+    [revenueValue, commissionRates]
+  );
+  console.log('commissionPB', commissionPerBand);
+  console.log('TC', totalCommission);
 
   const hanndleInputChange = useCallback<ChangeEventHandler<HTMLInputElement>>((e) => {
     setRevenueValue(+e.target.value);
   }, []);
 
+  if (isLoading) {
+    return <div>loading</div>;
+  }
+  if (isError || !commissionRates?.length) {
+    return <div>error fetching commission rates</div>;
+  }
+
   return (
     <div className="bg-gray-100">
       <input type="number" value={revenueValue} onChange={hanndleInputChange} />
       {commissionPerBand.map((band, i) => {
-        const { min: bandMin, max: bandMax } = COMMISSION_RATES[i];
+        const { min: bandMin, max: bandMax } = commissionRates[i];
         const { qualifyingRevenueAmount, commission } = band;
         return (
           <div key={`${bandMin}_${bandMax}_band`}>
