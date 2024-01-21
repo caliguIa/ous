@@ -14,6 +14,7 @@ export const Band: FC<Props> = ({ index, commission }: Props) => {
 
   const { min: bandMin, max: bandMax, rate } = commissionRates[index];
 
+  // TODO: make elements below into reuseable component
   return (
     <div className="bg-gray-50 rounded-md border border-gray-300 p-2 m-2 min-w-64 text-sm font-bold text-black">
       <div className="flex flex-row justify-between ">

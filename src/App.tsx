@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Widget from './components/widget';
+import CommissionCalcWrapper from './components/commissionCalculator';
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Widget />
+        <CommissionCalcWrapper />
       </QueryClientProvider>
     </>
   );

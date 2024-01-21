@@ -23,7 +23,7 @@ export const useCommissionRates = ({ willError = false }: { willError: boolean }
             data: COMMISSION_RATES_RESPONSE,
             status: 200,
           });
-        });
+        }, 2000);
       });
       // TODO use error/status to create non-generic frontend error messaging
       const { data } = await ratesReq;
