@@ -9,7 +9,10 @@ type Props = {
 };
 
 export const Widget: FC<Props> = ({ children, isLoading, isError, title }) => {
-  // TODO context for current language
+  // TODO:
+  // - context for current language
+  // - current lang switcher
+  // - make fetch error toggle
 
   return (
     <div className="bg-gray-100 h-screen w-screen">
