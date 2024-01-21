@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { LANG } from '../../utils';
+import { LANG } from '@/utils';
 
 type Props = {
   children: JSX.Element;

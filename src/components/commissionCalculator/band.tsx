@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { useCommissionRates } from '../../hooks';
-import { LANG } from '../../utils';
+import { useCommissionRates } from '@/hooks';
+import { LANG } from '@/utils';
 import { BandValue } from './bandValue';
 
 type Props = {

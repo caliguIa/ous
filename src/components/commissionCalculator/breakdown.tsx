@@ -1,8 +1,8 @@
 import { FC, useMemo } from 'react';
 import { Band } from './band';
-import { CommissionBand } from '../../schemas';
-import { useCommissionRates } from '../../hooks';
-import { LANG } from '../../utils';
+import { CommissionBand } from '@/schemas';
+import { useCommissionRates } from '@/hooks';
+import { LANG } from '@/utils';
 
 type Props = {
   commissionPerBand: CommissionBand[];

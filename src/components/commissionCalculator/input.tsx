@@ -1,5 +1,5 @@
 import { ChangeEventHandler, FC, FormEventHandler } from 'react';
-import { LANG } from '../../utils';
+import { LANG } from '@/utils';
 
 type Props = {
   revenueValue: number;

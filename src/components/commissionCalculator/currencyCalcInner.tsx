@@ -2,8 +2,8 @@ import { useCallback, useState, ChangeEventHandler, FormEventHandler } from 'rea
 import { Breakdown } from './breakdown';
 import { Calculate } from './input';
 import { TotalCommission } from './total';
-import { useCommission, useCommissionRates } from '../../hooks';
-import { CommissionBand } from '../../schemas';
+import { useCommission, useCommissionRates } from '@/hooks';
+import { CommissionBand } from '@/schemas';
 
 export const CommissionCalcInner = () => {
   const [revenueValue, setRevenueValue] = useState<number>(0);

@@ -1,6 +1,6 @@
-import { useCommissionRates } from '../../hooks';
+import { useCommissionRates } from '@/hooks';
 import { CommissionCalcInner } from './currencyCalcInner';
-import { LANG } from '../../utils';
+import { LANG } from '@/utils';
 import Widget from '../widget';
 import { FC } from 'react';
 
