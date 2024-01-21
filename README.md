@@ -1,1 +1,1 @@
-# One-up sales commission widget
+# One-up sales commission calculator widget
