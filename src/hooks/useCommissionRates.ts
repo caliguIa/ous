@@ -14,7 +14,7 @@ export const useCommissionRates = ({ willError = false }: { willError: boolean }
         setTimeout(() => {
           if (willError) {
             reject({
-              status: 500,
+              status: 400,
               data: null,
               error: 'Something went wrong',
             });
@@ -31,5 +31,7 @@ export const useCommissionRates = ({ willError = false }: { willError: boolean }
       // TODO JSON.parse parses infinity as null
       return JSON.parse(data as unknown as string);
     },
+    gcTime: Infinity,
+    staleTime: Infinity,
   });
 };
