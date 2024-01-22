@@ -10,7 +10,7 @@ export const LANG = {
     PERCENT_SYMBOL: '%',
     PLUS_SYMBOL: '+',
     'WIDGET.LOADING': 'Loading',
-    'WIDGET.ERROR_RATES': "Couldn't get commission rates, please try again",
+    'WIDGET.ERROR_RATES': "Couldn't calculate commission, please try again",
     'WIDGET.BAND.TITLE': 'Earnings breakdown:',
     'WIDGET.BAND.FROM': 'From:',
     'WIDGET.BAND.TO': 'To:',

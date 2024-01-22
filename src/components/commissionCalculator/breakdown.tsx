@@ -15,6 +15,7 @@ export const Breakdown: FC = () => {
     [commissionPerBand]
   );
 
+  // TODO render loading state when retrying exponential backoff fetch
   if (isError) {
     return <div>{LANG['EN']['WIDGET.ERROR_RATES']}</div>;
   }
