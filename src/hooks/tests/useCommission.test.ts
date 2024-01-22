@@ -1,5 +1,5 @@
 import { useCommission } from '..';
-import { CommissionRates } from '../../schemas';
+import { CommissionRates } from '@/schemas';
 
 const COMMISSION_RATES: CommissionRates = [
   { min: 0, max: 5000, rate: 0 },

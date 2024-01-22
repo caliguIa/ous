@@ -2,18 +2,23 @@ import { FC } from 'react';
 import { useCommissionRates } from '@/hooks';
 import { LANG } from '@/utils';
 import { BandValue } from './bandValue';
+import { useRevenueValue } from '@/contexts/commission';
 
 type Props = {
   index: number;
-  commission: number;
-  qualifyingRevenueAmount: number;
 };
 
-export const Band: FC<Props> = ({ index, commission }: Props) => {
-  const { data: commissionRates } = useCommissionRates({ willError: false });
-  if (!commissionRates?.length) return null;
+export const Band: FC<Props> = ({ index }: Props) => {
+  const { revenueValue, willError } = useRevenueValue();
 
-  const { min: bandMin, max: bandMax, rate } = commissionRates[index];
+  const { data: commission } = useCommissionRates({ willError, value: revenueValue });
+  const { commissionPerBand } = commission || {};
+
+  if (!commissionPerBand?.length) return null;
+
+  const band = commissionPerBand[index];
+  const { min: bandMin, max: bandMax, rate } = band.commissionRate;
+  const { commission: commissionValue } = band;
 
   return (
     <div className="bg-gray-50 rounded-md border border-gray-300 p-2 m-2 min-w-64 text-sm font-bold text-black">
@@ -31,7 +36,7 @@ export const Band: FC<Props> = ({ index, commission }: Props) => {
       </div>
       <div className="flex justify-between">
         <BandValue
-          value={commission}
+          value={commissionValue}
           label={LANG['EN']['WIDGET.BAND.COMMISSION_SUB']}
           symbol={LANG['EN']['CURRENCY_SYMBOL']}
           valueFontSize="text-4xl"

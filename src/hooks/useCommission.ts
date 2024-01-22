@@ -1,4 +1,4 @@
-import { Commission, CommissionRates } from '../schemas';
+import { Commission, CommissionRates } from '@/schemas';
 
 type UseCommission = (amount: number, commissionRates: CommissionRates | undefined) => Commission;
 
@@ -27,7 +27,8 @@ export const useCommission: UseCommission = (amount, commissionRates) => {
       const commission = roundToTwoDecimalPlaces(qualifyingRevenueAmount * commissionRate.rate);
 
       acc.totalCommission += commission;
-      acc.commissionPerBand.push({ qualifyingRevenueAmount, commission });
+      acc.commissionPerBand.push({ qualifyingRevenueAmount, commission, commissionRate });
+
       return acc;
     },
     { totalCommission: 0, commissionPerBand: [] }
