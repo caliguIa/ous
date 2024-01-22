@@ -18,22 +18,27 @@ describe('should return commission successfully if valid args passed', () => {
         {
           qualifyingRevenueAmount: 5000,
           commission: 0,
+          commissionRate: COMMISSION_RATES[0],
         },
         {
           qualifyingRevenueAmount: 5000,
           commission: 500,
+          commissionRate: COMMISSION_RATES[1],
         },
         {
           qualifyingRevenueAmount: 5000,
           commission: 750,
+          commissionRate: COMMISSION_RATES[2],
         },
         {
           qualifyingRevenueAmount: 3000,
           commission: 600,
+          commissionRate: COMMISSION_RATES[3],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[4],
         },
       ],
     };
@@ -49,22 +54,27 @@ describe('should return commission successfully if valid args passed', () => {
         {
           qualifyingRevenueAmount: 5000,
           commission: 0,
+          commissionRate: COMMISSION_RATES[0],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[1],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[2],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[3],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[4],
         },
       ],
     };
@@ -80,22 +90,27 @@ describe('should return commission successfully if valid args passed', () => {
         {
           qualifyingRevenueAmount: 5000,
           commission: 0,
+          commissionRate: COMMISSION_RATES[0],
         },
         {
           qualifyingRevenueAmount: 5000,
           commission: 500,
+          commissionRate: COMMISSION_RATES[1],
         },
         {
           qualifyingRevenueAmount: 5000,
           commission: 750,
+          commissionRate: COMMISSION_RATES[2],
         },
         {
           qualifyingRevenueAmount: 5000,
           commission: 1000,
+          commissionRate: COMMISSION_RATES[3],
         },
         {
           qualifyingRevenueAmount: 3230,
           commission: 807.5,
+          commissionRate: COMMISSION_RATES[4],
         },
       ],
     };
@@ -111,22 +126,27 @@ describe('should return commission successfully if valid args passed', () => {
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[0],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[1],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[2],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[3],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[4],
         },
       ],
     };
@@ -142,22 +162,27 @@ describe('should return commission successfully if valid args passed', () => {
         {
           qualifyingRevenueAmount: 5000,
           commission: 0,
+          commissionRate: COMMISSION_RATES[0],
         },
         {
           qualifyingRevenueAmount: 10.74,
           commission: 1.07,
+          commissionRate: COMMISSION_RATES[1],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[2],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[3],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[4],
         },
       ],
     };
@@ -175,22 +200,27 @@ describe('should return default values if invalid args passed', () => {
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[0],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[1],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[2],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[3],
         },
         {
           qualifyingRevenueAmount: 0,
           commission: 0,
+          commissionRate: COMMISSION_RATES[4],
         },
       ],
     };
